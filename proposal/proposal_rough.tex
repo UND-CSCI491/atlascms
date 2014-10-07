@@ -1,0 +1,76 @@
+\documentclass[12pt]{article} 
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\input{proposal-defs-alt}
+\usepackage{url}
+\usepackage{latexsym}
+\usepackage{eepic,color,bm,array,amsmath}
+%\input{macros}
+\def\A{{\cl A}}
+\def\L{{\cl L}}
+
+\sloppy
+
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\ie}{{\it i.e.}}
+
+\newcommand{\nbody}{{$n$-body }}
+\newcommand{\milkywayathome}{{MilkyWay@Home }}
+
+\newcommand{\aj}{AJ}
+\newcommand{\apj}{APJ}
+\newcommand{\aap}{AAP}
+\newcommand{\apjl}{APJL}
+
+%\newcommand{\subsubsubsection}{\subsubsection*}
+%\newcommand{\subsubsubsubsection}{\subsubsection*}
+
+\begin{document}
+
+\pagestyle{empty}
+% Make sections use the alphabet rather than numbers
+\renewcommand{\thesection}{\Alph{section}}
+
+%\small
+\setlength{\parsep}{5pt}
+\setlength{\parskip}{5pt plus 2pt minus 1pt}
+
+%\newpage
+\noindent
+{\large\bf AtlasCMS: An Online Atlas Content Management System}
+
+\begin{center}
+\begin{minipage}{0.53\linewidth}
+\begin{center}
+{\bf Michael Marti}\\
+\begin{small}
+Student\\
+Department of Computer Science\\
+{\it michael.marti@my.und.edu}
+\end{small}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.43\linewidth}
+\begin{center}
+{\bf Marshall Mattingly}\\
+\begin{small}
+Student\\
+Department of Computer Science\\
+{\it marshall.p.mattingly@my.und.edu}
+%\vspace{\baselineskip}
+\end{small}
+\end{center}
+\end{minipage}
+\end{center}
+
+\noindent
+The goals of this collaborative proposal are to: {\it i}) create a content management system (CMS) that will allow students from multiple disciplines to upload and maintain maps, graphs, narratives, audio, and other data representing demographic, economic, and social changes across the state of North Dakota in the past 125 years; {\it ii}) implement algorithms and interfaces that allow the students to represent complex maps and data sets interactively from ArcGIS, digital mapping software; and {\it iii}) assist with the initial procurement and setup of the web server, database, and storage for the CMS.
+
+\paragraph{Scientific Merit:} \hspace{-5mm} As North Dakota approaches its 125\textsuperscript{th} anniversary of statehood, there is a wealth of demographic, economic, and social data available relating to the diverse religious, ethnic, and social groups of North Dakota. However, this data is scattered across many fields, including anthropology, history, religious studies, sociology, and American Indian studies, without any single source location to view multiple narratives. Creating interactive maps and graphs with accompanying text and audio narratives across these disciplines will allow students and the general public to learn about multiple aspects of North Dakota, creating connections between the multiple disciplines that may not have been apparent otherwise.
+
+\paragraph{Broader Impact:} \hspace{-5mm} Creating a CMS instead of a hard-coded website allows for expandability into other projects that wish to represent geographical data sets with an interactive user experience. Utilizing an open-source license for the CMS will allow others to expand upon the features of the AtlasCMS to their specific needs, further increasing its versatility.
+
+\paragraph{Approach:} \hspace{-5mm} To allow for maximum portability and simplification of coding, we will implement several robust, well-tested open source web application programming interfaces (APIs) and frameworks, such as JQuery and Bootstrap for the client-side interface, and Flask and Jinja for the server-side implementation. The database will be served by MySQL and will allow for the efficient categorization of chapters, narratives, maps, and other data sets. We will use an agile prototyping development methodology to create several different design and data representation mockups, picking the best aspects from each prototype based on feedback from the multidisciplinary students to create a polished end design.
+
+\end{document}
