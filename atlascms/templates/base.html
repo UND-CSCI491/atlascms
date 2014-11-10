@@ -1,0 +1,63 @@
+{% set r = get_flashed_messages()[0] %}
+<!doctype html>
+<html lang="en" {% if r %}data-transition="true"{% endif %}>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}PickPicks{% endblock %}</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/gridster-0.5.1.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-select-1.5.4.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/glyphicons.css') }}">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu">
+        <style>
+            main {
+                margin-top: {% block main_margin %}150{% endblock %}px;
+                margin-bottom: 50px;
+            }
+            .item {
+                background-color: #004756;
+                height: {% block gridster_height %}{% endblock %}px;
+            }
+            .footer-item {
+                margin: 10px;
+            }
+            {% block css %}{% endblock %}
+        </style>
+    </head>
+    <body>
+        {% block header %}{% endblock %}
+        <main>
+            <div class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="gridster item active">
+                        <ul>
+                            {% block gridster_widgets %}{% endblock %}
+                        </ul>
+                    </div>
+                    <div class="item"></div>
+                </div>
+            </div>    
+        </main>
+        {% block footer %}
+            <div class="transition centered">
+                <span class="footer-item">
+                    <a href="{{ url_for('static', filename='how-things-work') }}">how things work</a>
+                </span>&middot;
+                <span class="footer-item">
+                    <a href="{{ url_for('static', filename='mumbo-jumbo') }}">mumbo jumbo</a>
+                </span>
+            </div>
+        {% endblock %}
+        <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="{{ url_for('static', filename='js/gridster-0.5.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap-select-1.5.4.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+        <script>
+            {% block js %}{% endblock %}
+        </script>
+    </body>
+</html>
