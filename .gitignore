@@ -37,8 +37,3 @@ Desktop.ini
 # MAC
 ##
 .DS_Store
-
-##
-# DATABASES
-##
-*.db
