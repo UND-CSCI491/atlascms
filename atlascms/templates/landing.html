@@ -35,10 +35,20 @@
                 </div>
             </div>
         </main>
+        <div style="background-color: #eee; margin-top: 100px; padding: 50px;">
+            <div class="footer container">
+            
+            </div>
+        </div>
         <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <script>
-            $('img').attr('style', 'height: 200px; width: 200px; float: right; margin: 10px');
+            $('img').attr('style', 'background-color: #eee; border: 2px solid #ddd; padding: 3px;');
+            var footer = $('#content').html().match(/{footer}(.*?){\/footer}/)[1];
+            $('#content').html($('#content').html().replace(/{footer}.*?{\/footer}/, ''));
+
+            $('.footer').html(footer);
+            
             var headers = $('#content h1');
             var html = '';
             headers.each(function(i) {
