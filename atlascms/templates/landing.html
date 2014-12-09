@@ -7,28 +7,30 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.cs">
         <style>
+            li.hideMe {
+                display: none;
+            }
             li.active {
                 font-weight: bold;
                 border-left: 3px solid #333;
+                display: block;
             }
         </style>
         {% render_block "css" %}
     </head>
-    <body style="margin-top: 100px; position: relative; height: 300px; overflow-y: scroll;" data-spy="scroll" data-target=".spy-on-me">
+    <body style="margin-top: 50px; position: relative; height: 300px; overflow-y: scroll;" data-spy="scroll" data-target=".spy-on-me">
         {% cms_toolbar %}
-        <div class="jumbotron">
-            <div class="container">
-                {% placeholder "feature" %}
-            </div>
-        </div>
         <main class="container">
             <div class="row">
-                <div id="content" class="col-lg-10">
+                <div id="content" class="col-lg-9">
+                    <div class="jumbotron">
+                        {% placeholder "feature" %}
+                    </div>
                     {% placeholder "content" %}
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div style="position: fixed;" class="spy-on-me">
-                        <ul class="nav" style="border-left: 1px solid #777">
+                        <ul class="nav" style="border-left: 1px solid #777;">
                         
                         </ul>
                     </div>
@@ -49,13 +51,45 @@
 
             $('.footer').html(footer);
             
-            var headers = $('#content h1');
+            var headers = $('#content h1,#content h2,#content h3');
             var html = '';
-            headers.each(function(i) {
-                html += '<li><a href="#section'+(i+1)+'">'+$(this).html()+'</a></li>';
-                $(this).attr('id', 'section'+(i+1));
-                $(this).css('padding-top', 100);
-            });
+
+            var i = 1;
+            while (headers.eq(i).prop('tagName') == 'H1') {
+                html += '<li><a href="#section'+(i+1)+'">'+headers.eq(i).find('strong').html()+'</a>';
+                headers.eq(i).attr('id', 'section'+(i+1));
+                
+                i++;
+
+                if (headers.eq(i).prop('tagName') == 'H2') {
+                    html += '<ul class="nav" style="font-size: 10pt;">';
+                    
+                    while (headers.eq(i).prop('tagName') == 'H2') {
+                        html += '<li class=""><a href="#section'+(i+1)+'">'+headers.eq(i).find('strong').html()+'</a>';
+                        headers.eq(i).attr('id', 'section'+(i+1));
+
+                        i++;
+
+                        if (headers.eq(i).prop('tagName') == 'H3') {
+                            html += '<ul class="nav" style="font-size: 8pt;">';
+                            
+                            while (headers.eq(i).prop('tagName') == 'H3') {
+                                html += '<li class="hideMe"><a href="#section'+(i+1)+'">'+headers.eq(i).find('strong').html()+'</a>';
+                                headers.eq(i).attr('id', 'section'+(i+1));
+
+                                i++;
+                            }
+
+                            html += '</ul></li>';
+                        }
+                        else html += '</li>';
+                    }
+
+                    html += '</ul></li>';
+                }
+                else html += '</li>';
+            }
+            
             $('.spy-on-me > .nav').html(html);
         
         </script>
