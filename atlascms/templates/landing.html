@@ -23,8 +23,9 @@
         <main class="container">
             <div class="row">
                 <div id="content" class="col-lg-9">
-                    <div class="jumbotron">
+                    <div class="jumbotron" style="text-align: center;">
                         {% placeholder "feature" %}
+                        <button type="button" class="btn btn-lg btn-primary">Explore Chapter 1</button>
                     </div>
                     {% placeholder "content" %}
                 </div>
@@ -46,27 +47,29 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <script>
             $('img').attr('style', 'background-color: #eee; border: 2px solid #ddd; padding: 3px;');
-            var footer = $('#content').html().match(/{footer}(.*?){\/footer}/)[1];
-            $('#content').html($('#content').html().replace(/{footer}.*?{\/footer}/, ''));
+            var footer = $('#content').html().match(/{footer}([\s\S]*?){\/footer}/)[1];
+            $('#content').html($('#content').html().replace(/{footer}[\s\S]*?{\/footer}/, ''));
 
             $('.footer').html(footer);
             
-            var headers = $('#content h1,#content h2,#content h3');
+            var headers = $('#content h1,#content h2');
             var html = '';
 
             var i = 1;
             while (headers.eq(i).prop('tagName') == 'H1') {
                 html += '<li><a href="#section'+(i+1)+'">'+headers.eq(i).find('strong').html()+'</a>';
                 headers.eq(i).attr('id', 'section'+(i+1));
+                headers.eq(i).attr('style', 'padding-top: 100px;');
                 
                 i++;
 
                 if (headers.eq(i).prop('tagName') == 'H2') {
-                    html += '<ul class="nav" style="font-size: 10pt;">';
+                    html += '<ul class="nav" style="font-size: 8pt;">';
                     
                     while (headers.eq(i).prop('tagName') == 'H2') {
                         html += '<li class=""><a href="#section'+(i+1)+'">'+headers.eq(i).find('strong').html()+'</a>';
                         headers.eq(i).attr('id', 'section'+(i+1));
+                        headers.eq(i).attr('style', 'padding-top: 100px;');
 
                         i++;
 
