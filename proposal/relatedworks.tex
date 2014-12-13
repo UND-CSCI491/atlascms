@@ -1,0 +1,154 @@
+\documentclass[conference]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+\usepackage{amsmath}
+\usepackage{epsfig}
+
+
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{AtlasCMS Related Works Survey}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+%\author{Travis Desell\IEEEauthorrefmark{1}, Malik Magdon-Ismail\IEEEauthorrefmark{2}, Heidi Newberg\IEEEauthorrefmark{3}, Lee Newberg\IEEEauthorrefmark{2}, Boleslaw K. Szymanski\IEEEauthorrefmark{2} and Carlos A. Varela\IEEEauthorrefmark{2}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science\\
+%University of North Dakota, Grand Forks, ND 58202\\ Email: travis.desell@gmail.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Computer Science\\
+%Rensselaer Polytechnic Institute, Troy, NY 12180\\ Email: [szymansk,magdon,leen]@cs.rpi.edu}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Physics, Applied Physics and Astronomy\\
+%Rensselaer Polytechnic Institute, Troy, NY 12180\\ Email: heidi@rpi.edu}
+
+\author{
+\IEEEauthorblockN{
+Marshall Mattingly\hspace{20pt}
+Michael Marti}
+\IEEEauthorblockA{Department of Computer Science,\\
+University of North Dakota\\
+}
+Email: \{marshall.p.mattingly, michael.marti\}@my.und.edu
+}
+
+
+
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+
+%\author{\IEEEauthorblockN{Travis Desell\IEEEauthorrefmark{1},
+%Malik Magdon-Ismail\IEEEauthorrefmark{2},
+%Heidi Newberg\IEEEauthorrefmark{3}, 
+%Lee Newberg\IEEEauthorrefmark{2},
+%Boleslaw Szymanski\IEEEauthorrefmark{2} and
+%Carlos Varela\IEEEauthorrefmark{2}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science\\
+%University of North Dakota,
+%Grand Forks, ND 58203\\ Email: tdesell@cs.und.edu}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Computer Science,
+%Rensselaer Polytechnic Institute,
+%Troy, NY 12180\\ Email: [magdon,leen,szymansk]@cs.rpi.edu}
+%\IEEEauthorblockA{
+%\IEEEauthorrefmark{3}Department of Physics, Applied Physics and Astronomy\\
+%Rensselaer Polytechnic Institute,
+%Troy, NY 12180\\ Email: [magdon,leen,szymansk,cvarela]@cs.rpi.edu, heidi@rpi.edu}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Computer Science\\
+%Rensselaer Polytechnic Institute,
+%Troy, NY 12180\\ Email: [magdon,leen,szymansk]@cs.rpi.edu}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Department of Physics, Applied Physics and Astronomy\\
+%Rensselaer Polytechnic Institute,
+%Troy, NY 12180\\ Email: heidi@rpi.edu}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+%\begin{abstract}
+
+%Volunteer computing grids offer supercomputing levels of computing power at the relatively low cost of operating a server. In previous work, the authors have shown that it is possible to take traditionally iterative evolutionary algorithms and execute them on volunteer computing grids by performing them asynchronously. The asynchronous implementations dramatically increase scalability and decrease the time taken to converge to a solution. Iterative and asynchronous optimization algorithms implemented using MPI on clusters and supercomputers, and BOINC on volunteer computing grids have been packaged together in a framework for generic distributed optimization (FGDO). This paper presents a new extension to FGDO for an asynchronous Newton method (ANM) for local optimization. ANM is resilient to heterogeneous, faulty and unreliable computing nodes and is extremely scalable. Preliminary results show that it can converge to a local optimum in significantly fewer iterations than conjugate gradient descent.
+
+%\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+\section{Atlas of the Historical Geography of the United States~\cite{us-historical-atlas-2014}}
+
+Excellent maps and a good table-of-contents that we may look at integrating, but there is no narratives associated with the maps, and it is exclusively static maps, no graphs or interactive elements.
+
+\section{Bootstap~\cite{bootstrap-2014}}
+
+Bootstrap is a frontend framework that is used to develop responsive web-based applications specifically with mobile first projects in mind.  Bootstrap at its core supports fluid layouts and multiple design views right out of the box with little to no additional coding.  This makes it possible to easily design templates with fluid layouts that automatically scale and resize based on how a user is viewing the app.  This also minimizes the development time required since a single
+template can be designed and developed, while leaving the fluid layout to be scaled automatically by Bootstrap’s JavaScript plugins.
+
+\section{Data-Driven Documents~\cite{d3js-2014}}
+
+D3.js is another JavaScript library that allows countless ways to interact with different data sources in tables, graphs, and maps, just to name a few.  D3,js utilizes the newest features in HTML5 specs, and allows the ability to have arbitrary data sources and create powerful data-driven interfaces for a unique user experience.
+
+\section{DjangoCMS~\cite{django-cms-2014}}
+
+Django CMS is a fully customizable open-source content management system written in Python using Django. Just releasing version 3.0, Django CMS overcomes many of the CMS obstacles encountered by the project: version control, draft vs published pages, WSIWYG editor for text, and handling add-ons, such as complex graphs. Utilizing an already existing framework that is used by businesses as well as blogs for the CMS backbone allows us to focus on creating the atlas specific
+add-ons, primarily interactive maps and narratives.
+
+\section{Django Template System~\cite{django-template-2014}}
+
+Django has a powerful templating system that allows you to mix Python code with HTML.  Django’s templating system allows you to create a raw HTML page, but also the ability to pass in Python objects to iterate through and create dynamic content on the fly.
+
+\section{Gridster~\cite{gridster-2014}}
+
+Gridster is a jQuery plugin that enables drag-and-drop grids while utilizing only JavaScript and CSS. This means not only can we take advantage of the responsiveness of Bootstrap, but we can also resize and move individual elements within the web page, or even allow the user to define their own layout based on their personal preference.
+
+Gridster gives us the ability to even display different views within the same layout based on the size of each widget or tile.  For instance, making a widget wider may display a new column of information in a table, while making a widget taller may display an image versus text.
+
+\section{jQuery~\cite{jquery-2014}}
+
+jQuery is a JavaScript library, which makes things like DOM traversal and manipulation, event handling, transitions, and AJAX requests easy with an API that offers excellent cross-browser support. jQuery ensures a consistent experience for users even across different browsers by implementing multiple fallbacks for a multitude of browsers.  This means utilizing the newest standards for browsers that support the full HTML5 specification, while still maintaining compatibility
+with older browsers by falling back to older standards to maintain the same level of functionality and features.
+
+\section{Python for ArcGIS~\cite{arcpy-2014}}
+
+Python for ArcGIS is a Python framework for interacting with ArcGIS data. This software suite gives us the potential to access and manipulate raw ArcGIS data, using a DjangoCMS application along with JavaScript to represent accurate and interactive maps from raw ArcGIS data. This would allow us to create dynamic elements without the need to pre-build several maps.
+
+\section{Urban Layers: Manhattan's Urban Fabric~\cite{urban-layers-2014}}
+
+Urban Layers is an interactive map created by Morphocode that explores the structure of Manhattan's urban fabric. The map lets you navigate through historical fragments of the borough that have been preserved and are currently embedded in its densely built environment. The rigid archipelago of building blocks has been mapped as a succession of structural episodes starting from 1765.
+
+\section{Washington DC: Our Changing City~\cite{dc-changing-2014}}
+
+Washington DC historical data in an interesting form. Integrates narratives on the left-side and a corresponding graph, map, or interactive element on the right side. Using the CMS, we will likely create something similar to this. Chapters are apparent and split the data into logical groupings.
+
+\bibliographystyle{IEEEtran.bst}
+\bibliography{./references.bib}
+
+\end{document}

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Maintained by Marshall Mattingly
+
 import os, subprocess, sys
 
 # global variables

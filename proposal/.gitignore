@@ -1,4 +1,7 @@
 # LaTeX compiled files
 *.log
 *.aux
+*.bib
+*.bbl
+*.blg
 *.synctex.gz

@@ -1,0 +1,12 @@
+This file explains project-level TODOs. For TODOs related to specific files,
+please check the comments of those files.
+
+Marshall Mattingly
+TODO: Change requirements.txt to use Django 1.6 so migrations don't pop up
+TODO: Research creating apps in DjangoCMS
+TODO: Create a skeleton app for timelapses in DjangoCMS
+
+Michael Marti
+TODO: Add UND themeing to all templates
+TODO: Add legend content to the page template
+TODO: Add the ability to change the map on the page template

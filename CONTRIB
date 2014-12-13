@@ -1,0 +1,15 @@
+This file explains the contributions of persons working on the project in
+a general sense. For more detailed information, see the git history and
+comments in specific files.
+
+Marshall Mattingly [backend]
+ * Setup DjangoCMS
+ * Setup manage.py to automatically setup a python virtualenv and download
+     all required files from pypi
+ * Setup virtual machine
+ * Project proposal and related works
+
+Michael Marti [frontend]
+ * Created templates for front page and chapters
+ * Added initial content for front page and chapters
+ * Project proposal and related works

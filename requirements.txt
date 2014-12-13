@@ -1,3 +1,5 @@
+# Maintained by Marshall Mattingly
+
 django-cms>=3.0
 
 # Django and plugins
