@@ -1,3 +1,4 @@
+<!-- CODED BY MICHAEL MARTI -->
 {% load cms_tags staticfiles sekizai_tags menu_tags %}
 <!doctype html>
 <html>
@@ -18,6 +19,11 @@
         </style>
         {% render_block "css" %}
     </head>
+    
+    <!-- TODO: add better scrollspy features -->
+    <!--     * hide subsections not being viewed -->
+    <!--     * add better highlighting and CSS transitions -->
+    
     <body style="margin-top: 50px; position: relative; height: 300px; overflow-y: scroll;" data-spy="scroll" data-target=".spy-on-me">
         {% cms_toolbar %}
         <main class="container">
@@ -72,6 +78,9 @@
                         headers.eq(i).attr('style', 'padding-top: 100px;');
 
                         i++;
+
+                        // TODO: Add better support for more than a single nested header
+                        //      * add support for up to h5
 
                         if (headers.eq(i).prop('tagName') == 'H3') {
                             html += '<ul class="nav" style="font-size: 8pt;">';

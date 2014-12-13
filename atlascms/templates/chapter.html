@@ -1,3 +1,4 @@
+<!-- CODED BY MICHAEL MARTI -->
 {% load cms_tags staticfiles sekizai_tags menu_tags %}
 <!doctype html>
 <html>
@@ -29,6 +30,8 @@
 			  <a class="navbar-brand" href="/en">ND Atlas</a>
 			</div>
 
+            <!-- TODO: Add automatic generation of chapters based on DB entries -->
+
 			<div class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="/en/chapter-1">Chapter 1</a></li>
@@ -41,6 +44,7 @@
 		  </div>
 		</nav>
         <main>
+            <!-- TODO: Add ability to upload images via Django content placeholder instead of hard coding src -->
 			<img style="position: fixed; width: 100%; height: 100%; z-index: -5" src="http://cdn.theatlantic.com/static/mt/assets/science/US-after.jpeg">
 			<div id="toc" style="width: 500px; float: right; background-color: #eee; border: 2px solid #ddd; padding: 3px; z-index: -1;">
 				<div id="icon" style="font-size: 20pt; width: 50px; height: 100%; vertical-align: middle; display: inline-block;">
@@ -52,6 +56,11 @@
         <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <script>$(function() {
+            // TODO:
+            //      * add better transition effects
+            //      * possibly add transparency when not hovering over narrative (touch screen devices a problem?)
+            //      * integrate plugins for interactive maps (Google Maps, etc.)
+            
 			$('#toc').height($(window).height()-50);
 			$('#narrative').height($(window).height()-75);
 			$('#icon').css('margin-top', $(window).height()/2-50);
